@@ -56,197 +56,206 @@
 
             this.SuspendLayout();
 
-            // lblTitle
+            // ═══════════════════════════════════════════════════════════
+            // TITLE
+            // ═══════════════════════════════════════════════════════════
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.Font = new System.Drawing.Font("Arial", 26F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(0, 70, 140);
-            this.lblTitle.Location = new System.Drawing.Point(25, 15);
+            this.lblTitle.Location = new System.Drawing.Point(40, 25);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(143, 26);
+            this.lblTitle.Size = new System.Drawing.Size(250, 40);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Report Issues";
+            this.lblTitle.Text = "📝 Report Issues";
 
-            // panelHeader
+            // ═══════════════════════════════════════════════════════════
+            // HEADER LINE
+            // ═══════════════════════════════════════════════════════════
             this.panelHeader.BackColor = System.Drawing.Color.FromArgb(0, 70, 140);
-            this.panelHeader.Location = new System.Drawing.Point(0, 50);
+            this.panelHeader.Location = new System.Drawing.Point(0, 85);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(600, 5);
+            this.panelHeader.Size = new System.Drawing.Size(1920, 6);
             this.panelHeader.TabIndex = 1;
 
-            // lblLocation
+            // ═══════════════════════════════════════════════════════════
+            // LOCATION
+            // ═══════════════════════════════════════════════════════════
             this.lblLocation.AutoSize = true;
-            this.lblLocation.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblLocation.Location = new System.Drawing.Point(25, 75);
+            this.lblLocation.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblLocation.Location = new System.Drawing.Point(40, 120);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(76, 16);
+            this.lblLocation.Size = new System.Drawing.Size(105, 25);
             this.lblLocation.TabIndex = 2;
-            this.lblLocation.Text = "Location:*";
+            this.lblLocation.Text = "📍 Location:*";
 
-            // txtLocation
-            this.txtLocation.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtLocation.Location = new System.Drawing.Point(25, 100);
+            this.txtLocation.Font = new System.Drawing.Font("Arial", 16F);
+            this.txtLocation.Location = new System.Drawing.Point(40, 155);
             this.txtLocation.Name = "txtLocation";
-            this.txtLocation.Size = new System.Drawing.Size(540, 23);
+            this.txtLocation.Size = new System.Drawing.Size(1000, 32);
             this.txtLocation.TabIndex = 3;
 
-            // lblCategory
+            // ═══════════════════════════════════════════════════════════
+            // CATEGORY
+            // ═══════════════════════════════════════════════════════════
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblCategory.Location = new System.Drawing.Point(25, 145);
+            this.lblCategory.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblCategory.Location = new System.Drawing.Point(40, 210);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(78, 16);
+            this.lblCategory.Size = new System.Drawing.Size(108, 25);
             this.lblCategory.TabIndex = 4;
-            this.lblCategory.Text = "Category:*";
+            this.lblCategory.Text = "📂 Category:*";
 
-            // cmbCategory
             this.cmbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbCategory.Font = new System.Drawing.Font("Arial", 10F);
-            this.cmbCategory.Location = new System.Drawing.Point(25, 170);
+            this.cmbCategory.Font = new System.Drawing.Font("Arial", 16F);
+            this.cmbCategory.Location = new System.Drawing.Point(40, 245);
             this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(540, 24);
+            this.cmbCategory.Size = new System.Drawing.Size(1000, 33);
             this.cmbCategory.TabIndex = 5;
 
-            // lblDescription
+            // ═══════════════════════════════════════════════════════════
+            // DESCRIPTION
+            // ═══════════════════════════════════════════════════════════
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblDescription.Location = new System.Drawing.Point(25, 215);
+            this.lblDescription.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblDescription.Location = new System.Drawing.Point(40, 300);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(95, 16);
+            this.lblDescription.Size = new System.Drawing.Size(128, 25);
             this.lblDescription.TabIndex = 6;
-            this.lblDescription.Text = "Description:*";
+            this.lblDescription.Text = "📝 Description:*";
 
-            // txtDescription
-            this.txtDescription.Font = new System.Drawing.Font("Arial", 10F);
-            this.txtDescription.Location = new System.Drawing.Point(25, 240);
+            this.txtDescription.Font = new System.Drawing.Font("Arial", 14F);
+            this.txtDescription.Location = new System.Drawing.Point(40, 335);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(540, 100);
+            this.txtDescription.Size = new System.Drawing.Size(1000, 160);
             this.txtDescription.TabIndex = 7;
+            this.txtDescription.Text = "";
 
-            // lblAttachment
+            // ═══════════════════════════════════════════════════════════
+            // ATTACHMENT
+            // ═══════════════════════════════════════════════════════════
             this.lblAttachment.AutoSize = true;
-            this.lblAttachment.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
-            this.lblAttachment.Location = new System.Drawing.Point(25, 355);
+            this.lblAttachment.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
+            this.lblAttachment.Location = new System.Drawing.Point(40, 510);
             this.lblAttachment.Name = "lblAttachment";
-            this.lblAttachment.Size = new System.Drawing.Size(93, 16);
+            this.lblAttachment.Size = new System.Drawing.Size(118, 25);
             this.lblAttachment.TabIndex = 8;
-            this.lblAttachment.Text = "Attachment:";
+            this.lblAttachment.Text = "📎 Attachment:";
 
-            // btnAttachMedia
             this.btnAttachMedia.BackColor = System.Drawing.Color.FromArgb(0, 120, 200);
             this.btnAttachMedia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAttachMedia.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold);
+            this.btnAttachMedia.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
             this.btnAttachMedia.ForeColor = System.Drawing.Color.White;
-            this.btnAttachMedia.Location = new System.Drawing.Point(25, 380);
+            this.btnAttachMedia.Location = new System.Drawing.Point(40, 545);
             this.btnAttachMedia.Name = "btnAttachMedia";
-            this.btnAttachMedia.Size = new System.Drawing.Size(150, 30);
+            this.btnAttachMedia.Size = new System.Drawing.Size(220, 45);
             this.btnAttachMedia.TabIndex = 9;
-            this.btnAttachMedia.Text = "Attach Media";
+            this.btnAttachMedia.Text = "📁 Attach Media";
             this.btnAttachMedia.UseVisualStyleBackColor = false;
             this.btnAttachMedia.Click += new System.EventHandler(this.btnAttachMedia_Click);
 
-            // lblAttachmentStatus
             this.lblAttachmentStatus.AutoSize = true;
-            this.lblAttachmentStatus.Font = new System.Drawing.Font("Arial", 9F);
+            this.lblAttachmentStatus.Font = new System.Drawing.Font("Arial", 14F);
             this.lblAttachmentStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lblAttachmentStatus.Location = new System.Drawing.Point(190, 385);
+            this.lblAttachmentStatus.Location = new System.Drawing.Point(280, 555);
             this.lblAttachmentStatus.Name = "lblAttachmentStatus";
-            this.lblAttachmentStatus.Size = new System.Drawing.Size(85, 15);
+            this.lblAttachmentStatus.Size = new System.Drawing.Size(140, 22);
             this.lblAttachmentStatus.TabIndex = 10;
             this.lblAttachmentStatus.Text = "No file attached";
 
-            // lblEngagementMessage
+            // ═══════════════════════════════════════════════════════════
+            // ENGAGEMENT FEATURES
+            // ═══════════════════════════════════════════════════════════
             this.lblEngagementMessage.AutoSize = true;
-            this.lblEngagementMessage.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblEngagementMessage.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.lblEngagementMessage.ForeColor = System.Drawing.Color.FromArgb(0, 120, 200);
-            this.lblEngagementMessage.Location = new System.Drawing.Point(25, 430);
+            this.lblEngagementMessage.Location = new System.Drawing.Point(40, 620);
             this.lblEngagementMessage.Name = "lblEngagementMessage";
-            this.lblEngagementMessage.Size = new System.Drawing.Size(238, 16);
+            this.lblEngagementMessage.Size = new System.Drawing.Size(380, 25);
             this.lblEngagementMessage.TabIndex = 11;
-            this.lblEngagementMessage.Text = "Start reporting to earn points!";
+            this.lblEngagementMessage.Text = "⭐ Start reporting to earn points!";
 
-            // progressEngagement
-            this.progressEngagement.Location = new System.Drawing.Point(25, 460);
+            this.progressEngagement.Location = new System.Drawing.Point(40, 660);
             this.progressEngagement.Name = "progressEngagement";
-            this.progressEngagement.Size = new System.Drawing.Size(350, 23);
+            this.progressEngagement.Size = new System.Drawing.Size(600, 40);
             this.progressEngagement.TabIndex = 12;
 
-            // lblPointsEarned
             this.lblPointsEarned.AutoSize = true;
-            this.lblPointsEarned.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.lblPointsEarned.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.lblPointsEarned.ForeColor = System.Drawing.Color.FromArgb(0, 70, 140);
-            this.lblPointsEarned.Location = new System.Drawing.Point(400, 460);
+            this.lblPointsEarned.Location = new System.Drawing.Point(660, 670);
             this.lblPointsEarned.Name = "lblPointsEarned";
-            this.lblPointsEarned.Size = new System.Drawing.Size(68, 16);
+            this.lblPointsEarned.Size = new System.Drawing.Size(110, 25);
             this.lblPointsEarned.TabIndex = 13;
-            this.lblPointsEarned.Text = "Points: 0";
+            this.lblPointsEarned.Text = "🏆 Points: 0";
 
-            // lblStatus
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Italic);
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Italic);
             this.lblStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lblStatus.Location = new System.Drawing.Point(25, 500);
+            this.lblStatus.Location = new System.Drawing.Point(40, 715);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(131, 15);
+            this.lblStatus.Size = new System.Drawing.Size(220, 18);
             this.lblStatus.TabIndex = 14;
-            this.lblStatus.Text = "Reports: 0 | Status: Active";
+            this.lblStatus.Text = "📊 Reports: 0 | Status: Active";
 
-            // btnSubmit
+            // ═══════════════════════════════════════════════════════════
+            // BUTTONS
+            // ═══════════════════════════════════════════════════════════
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(0, 180, 60);
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSubmit.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(25, 540);
+            this.btnSubmit.Location = new System.Drawing.Point(40, 760);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(120, 40);
+            this.btnSubmit.Size = new System.Drawing.Size(200, 55);
             this.btnSubmit.TabIndex = 15;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "✓ Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
 
-            // btnClear
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(200, 200, 200);
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnClear.Font = new System.Drawing.Font("Arial", 16F);
             this.btnClear.ForeColor = System.Drawing.Color.FromArgb(50, 50, 50);
-            this.btnClear.Location = new System.Drawing.Point(160, 540);
+            this.btnClear.Location = new System.Drawing.Point(260, 760);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 40);
+            this.btnClear.Size = new System.Drawing.Size(150, 55);
             this.btnClear.TabIndex = 16;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "🗑 Clear";
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
 
-            // btnViewReports
             this.btnViewReports.BackColor = System.Drawing.Color.FromArgb(0, 120, 200);
             this.btnViewReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewReports.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnViewReports.Font = new System.Drawing.Font("Arial", 16F);
             this.btnViewReports.ForeColor = System.Drawing.Color.White;
-            this.btnViewReports.Location = new System.Drawing.Point(275, 540);
+            this.btnViewReports.Location = new System.Drawing.Point(430, 760);
             this.btnViewReports.Name = "btnViewReports";
-            this.btnViewReports.Size = new System.Drawing.Size(140, 40);
+            this.btnViewReports.Size = new System.Drawing.Size(200, 55);
             this.btnViewReports.TabIndex = 17;
-            this.btnViewReports.Text = "View Reports";
+            this.btnViewReports.Text = "📋 View Reports";
             this.btnViewReports.UseVisualStyleBackColor = false;
             this.btnViewReports.Click += new System.EventHandler(this.btnViewReports_Click);
 
-            // btnBack
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(200, 70, 70);
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Arial", 10F);
+            this.btnBack.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(430, 540);
+            this.btnBack.Location = new System.Drawing.Point(650, 760);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(135, 40);
+            this.btnBack.Size = new System.Drawing.Size(200, 55);
             this.btnBack.TabIndex = 18;
-            this.btnBack.Text = "Back to Menu";
+            this.btnBack.Text = "↩ Back to Menu";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
 
-            // ReportIssuesForm
+            // ═══════════════════════════════════════════════════════════
+            // REPORT ISSUES FORM - SCROLLABLE
+            // ═══════════════════════════════════════════════════════════
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(600, 610);
+            this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnViewReports);
             this.Controls.Add(this.btnClear);
@@ -266,11 +275,13 @@
             this.Controls.Add(this.lblLocation);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.lblTitle);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.MaximizeBox = true;
+            this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "ReportIssuesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Report Issues - Municipal Services";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ReportIssuesForm_Load);
 
             this.ResumeLayout(false);
