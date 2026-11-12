@@ -1,7 +1,7 @@
 ═══════════════════════════════════════════════════════════════════════════════
                      MUNICIPAL SERVICES APPLICATION
                      AAPD7112/w - POE
-                      PARTS 1 & 2 IMPLEMENTATION
+                  PARTS 1, 2 & 3 IMPLEMENTATION
 ═══════════════════════════════════════════════════════════════════════════════
 
 📋 TABLE OF CONTENTS
@@ -11,7 +11,7 @@
 3.  Compilation Instructions
 4.  How to Run the Application
 5.  How to Use the Application
-6.  Data Structures Used
+6.  Data Structures Used (Implementation Report)
 7.  Features Overview
 8.  Troubleshooting
 9.  Project Structure
@@ -30,7 +30,7 @@ by providing residents with an easy-to-use digital platform to:
 
   ✓ Report municipal issues (Part 1)
   ✓ Access information about local events and announcements (Part 2)
-  ✓ (Future) Track the status of their service requests
+  ✓ Track the status of their service requests efficiently (Part 3)
 
 This application forms part of the Portfolio of Evidence (PoE) for the
 module AAPD7112/w - Advanced Application Development.
@@ -138,7 +138,7 @@ options:
 
   1. 📋 Report Issues                                (Active)
   2. 📅 Local Events and Announcements               (Active)
-  3. 📊 Service Request Status (Coming Soon)         (Disabled)
+  3. 📊 Service Request Status                       (Active)
 
 To exit, click the ✖ Exit button at the bottom of the form.
 
@@ -150,44 +150,25 @@ To exit, click the ✖ Exit button at the bottom of the form.
 
   2. Fill in the required fields:
 
-        • Location:*      Type the address or area of the issue.
-        • Category:*      Select a category from the dropdown menu:
-                            - Sanitation
-                            - Roads
-                            - Utilities
-                            - Public Safety
-                            - Waste Management
-                            - Housing
-                            - Other
-        • Description:*   Type a detailed description of the issue.
+        • Location:      Type the address or area of the issue.
+        • Category:      Select a category from the dropdown menu.
+        • Description:   Type a detailed description of the issue.
 
   3. (Optional) Attach a file:
         • Click "📁 Attach Media".
         • Choose an image or document from your computer.
         • Supported files: .jpg, .jpeg, .png, .gif, .bmp, .pdf,
                            .doc, .docx, .txt
-        • The filename will appear next to the button.
 
   4. Click "✓ Submit" to submit the report.
         • A success message will display with the report summary.
         • Points will be awarded to your account.
 
   5. Engagement features:
-        • Each report = 10 points.
-        • Each attachment = 5 bonus points.
-        • Earn achievements:
-             - First Report             (1 report)
-             - Community Contributor    (5 reports)
-             - Community Champion       (10 reports)
+        • Each report = 10 points. Each attachment = 5 bonus points.
+        • Earn achievements: First Report (1), Community Contributor (5), 
+          Community Champion (10).
         • A progress bar shows your total engagement (maximum 100 points).
-
-  6. Use the buttons at the bottom of the form:
-        • ✓ Submit          Submit the current report.
-        • 🗑 Clear           Clear all fields.
-        • 📋 View Reports   View all submitted reports.
-        • ↩ Back to Menu    Return to the Main Menu.
-
-  Fields marked with an asterisk (*) are mandatory.
 
 ────────────────────────────
 5.3  LOCAL EVENTS AND ANNOUNCEMENTS (Part 2)
@@ -196,104 +177,91 @@ To exit, click the ✖ Exit button at the bottom of the form.
   1. From the Main Menu, click "Local Events and Announcements".
 
   2. The form loads with a list of upcoming events. Events are colour-coded
-     by priority:
-
-        🔴 High priority    (urgent matters such as water/power outages)
-        🟡 Medium priority  (general service notices)
-        🟢 Low priority     (community and recreational events)
+     by priority (🔴 High, 🟡 Medium, 🟢 Low).
 
   3. Use the following features:
+        • 🔍 Search box: Filter events by title, category, or location.
+        • 📂 Category filter: Display only matching events.
+        • 📥 Load Events: Display all events sorted by priority.
 
-        • 🔍 Search box      Type a keyword and click "Search" to filter
-                             events by title, category, location or
-                             description.
+  4. Click any event in the left list to view its full details on the right.
 
-        • Clear button       Reset the search and show all events again.
-
-        • 📂 Category filter Choose a specific category from the dropdown
-                             to display only matching events. Categories:
-                                - Community
-                                - Utilities
-                                - Governance
-                                - Roads
-                                - Education
-                                - Waste
-                                - Health
-
-        • 📥 Load Events     Display all events sorted by priority
-                             (High → Medium → Low).
-
-  4. Click any event in the left list to view its full details on the right:
-        - Title
-        - Category
-        - Date (day of the week, day, month, year)
-        - Location
-        - Priority
-        - Full description
-
-  5. ⭐ Recommended for You
-        The application learns from your behaviour and suggests events you
-        may be interested in. Recommendations are based on:
-            • Categories you have browsed most often
-            • Keywords you have searched for
-            • Upcoming events (sooner = more relevant)
-            • Events with a higher priority
-
-  6. Click "↩ Back to Menu" to return to the Main Menu.
-
-  TIP: If the form feels too small, the window is resizable and
-       scrollbars will appear automatically. You can also maximise
-       the window for a full-screen view.
+  5. ⭐ Recommended for You:
+     The application learns from your behaviour (searches and category views)
+     and suggests upcoming, high-priority events you may be interested in.
 
 ────────────────────────────
-5.4  SERVICE REQUEST STATUS (Future)
+5.4  SERVICE REQUEST STATUS (Part 3)
 ────────────────────────────
 
-  This option is currently disabled and will be implemented in a future
-  part of the POE.
+  1. From the Main Menu, click "Service Request Status".
+
+  2. The form automatically loads sample service requests into the 
+     advanced data structures.
+
+  3. Search ID (BST):
+     Type a Request ID (e.g., 103) into the search box and click "Search". 
+     The AVL Tree will instantly locate and display the specific request.
+
+  4. Process Priority (Min-Heap):
+     Click the orange "⚠️ Process Priority" button. The Min-Heap will 
+     extract and display the most urgent request (Priority 1) first, 
+     followed by Priority 2, and so on. Click it multiple times to see 
+     the order in which requests are processed.
+
+  5. Optimise Routes (MST):
+     Click the purple "🗺️ Optimise Routes" button. The Graph will 
+     calculate the Minimum Spanning Tree (MST) to show the most efficient 
+     routing between different service locations based on distance.
 
 ═══════════════════════════════════════════════════════════════════════════════
 
-6. DATA STRUCTURES USED
+6. DATA STRUCTURES USED (IMPLEMENTATION REPORT)
 ───────────────────────────────────────────────────────────────────────────────
 
-The following data structures were implemented in the Local Events and
-Announcements form (Part 2) as required by the assignment specification:
+The application utilises various data structures across all three parts.
 
-┌─────────────────────────┬─────────────────────────────────────────────────┐
-│ DATA STRUCTURE          │ PURPOSE IN THE APPLICATION                      │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ Stack<Event>            │ Tracks recently viewed events (LIFO order).    │
-│                         │ The most recently viewed event is at the top.   │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ Queue<Event>            │ Stores events in first-in-first-out order      │
-│                         │ for sequential processing and display.          │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ Priority Queue          │ Implemented using a sorted List<Event>.         │
-│ (List<Event>)           │ Events are sorted by priority: High → Low,      │
-│                         │ then by date.                                   │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ SortedDictionary        │ Organises events by date. Keys are the event    │
-│ <DateTime, List<Event>> │ dates and entries are automatically sorted by  │
-│                         │ date.                                           │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ Dictionary              │ Groups events by category so they can be        │
-│ <string, List<Event>>   │ retrieved quickly by category name.             │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ HashSet<string>         │ Stores unique category names. Prevents          │
-│                         │ duplicates and is used to populate the          │
-│                         │ category filter dropdown.                       │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ HashSet<DateTime>       │ Stores unique event dates. Ensures that each    │
-│                         │ date appears only once.                         │
-├─────────────────────────┼─────────────────────────────────────────────────┤
-│ Dictionary<string, int> │ Tracks search history (keyword frequency) and   │
-│                         │ category view counts. Used by the               │
-│                         │ recommendation algorithm.                       │
-└─────────────────────────┴─────────────────────────────────────────────────┘
+PART 2: LOCAL EVENTS AND ANNOUNCEMENTS
+──────────────────────────────────────
+  • Stack<Event>: Tracks recently viewed events (LIFO order).
+  • Queue<Event>: Stores events in first-in-first-out order.
+  • Priority Queue (List<Event>): Sorts events by priority (High → Low).
+  • SortedDictionary: Organises events by date (automatically sorted).
+  • Dictionary: Groups events by category for fast retrieval.
+  • HashSet<string>: Stores unique category names to prevent duplicates.
+  • HashSet<DateTime>: Stores unique event dates.
+  • Dictionary<string, int>: Tracks search history for the recommendation engine.
 
-The Report Issues form (Part 1) uses a List<IssueReport> to store all
-submitted reports in memory during the session.
+PART 3: SERVICE REQUEST STATUS (Advanced Algorithms)
+────────────────────────────────────────────────────
+1. Binary Search Tree (AVL Tree)
+   - Role: Used to store and retrieve service requests by their unique ID.
+   - Contribution: By using a self-balancing AVL tree, search operations run 
+     in O(log n) time. When a user enters an ID to check the status, the tree 
+     is traversed rapidly, ensuring the UI remains responsive even with thousands 
+     of requests.
+   - Example: Searching for ID 103 traverses the root and branches left/right 
+     based on the numerical value, instantly returning the request without 
+     having to check every single record.
+
+2. Min-Heap (Priority Queue)
+   - Role: Used to manage the processing of urgent service requests.
+   - Contribution: A Min-Heap ensures the request with the highest priority 
+     (Priority 1) is always at the root. This allows the municipality to 
+     extract the most critical issues first in O(log n) time.
+   - Example: If a "Water Leak" (Priority 1) and a "Pothole" (Priority 3) are 
+     logged, the heap structure ensures the water leak is automatically bubbled 
+     to the top and extracted first by the maintenance team.
+
+3. Graphs and Minimum Spanning Tree (MST)
+   - Role: Used to represent the geographical relationships and distances 
+     between different service requests in various wards.
+   - Contribution: Kruskal's algorithm is used to find the MST. This optimises 
+     municipal routing by determining the shortest possible path connecting all 
+     related service issues, saving fuel and time for maintenance teams.
+   - Example: If there are multiple requests in Ward 12 and Ward 8, the MST 
+     calculates the shortest distance to connect them, ignoring longer, 
+     redundant paths.
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -301,38 +269,23 @@ submitted reports in memory during the session.
 ───────────────────────────────────────────────────────────────────────────────
 
 PART 1 - REPORT ISSUES
-─────────────────────
-  ✓ Main Menu with three navigation options
-  ✓ Report form with location, category and description inputs
-  ✓ File attachment using OpenFileDialog
-  ✓ Form validation with user feedback
-  ✓ Gamification system:
-        - Points (10 per report, 5 bonus per attachment)
-        - Progress bar (maximum 100 points)
-        - Achievement badges for milestones
-        - Motivational messages
-  ✓ View Reports feature
-  ✓ Data stored in memory using List<IssueReport>
+  ✓ Location, category, and description inputs.
+  ✓ File attachment using OpenFileDialog.
+  ✓ Gamification: points, progress bar, and achievements.
+  ✓ Data stored in memory using List<IssueReport>.
 
 PART 2 - LOCAL EVENTS AND ANNOUNCEMENTS
-───────────────────────────────────────
-  ✓ Displays upcoming events and announcements
-  ✓ Search by keyword (title, category, location, description)
-  ✓ Filter by category
-  ✓ Detailed event information on selection
-  ✓ Colour-coded priority levels (High / Medium / Low)
-  ✓ Recommendation engine based on user behaviour
-  ✓ Uses eight different data structures as required
-  ✓ Scrollable, resizable interface
-  ✓ Auto-opens maximised for readability
+  ✓ Search by keyword and filter by category.
+  ✓ Detailed event view on selection.
+  ✓ Recommendation engine based on user behaviour.
+  ✓ Scrollable, resizable, maximised interface.
 
-DESIGN PRINCIPLES APPLIED
-─────────────────────────
-  • Consistency:  Uniform colour scheme (blue, white, red for exit)
-  • Clarity:      Large, readable fonts and clear labels
-  • Feedback:     MessageBox alerts for success and errors
-  • Responsive:   Forms resize and scroll on any screen size
-  • Accessibility: High-contrast colours and large touch-friendly buttons
+PART 3 - SERVICE REQUEST STATUS
+  ✓ View a well-organised list of submitted requests and their statuses.
+  ✓ Search for specific requests using unique identifiers (AVL Tree).
+  ✓ Process urgent requests using priority-based extraction (Min-Heap).
+  ✓ Visualise efficient routing between service nodes (Graph/MST).
+  ✓ Scrollable, resizable, maximised interface.
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -341,38 +294,27 @@ DESIGN PRINCIPLES APPLIED
 
 PROBLEM:  The application will not start.
 SOLUTION: • Verify that .NET Framework 4.7.2 or higher is installed.
-          • Download it from:
-            https://dotnet.microsoft.com/download/dotnet-framework
+          • Download it from: https://dotnet.microsoft.com/download/dotnet-framework
 
 PROBLEM:  Compilation errors in Visual Studio.
 SOLUTION: • Check that all references are included.
           • Perform: Build → Clean Solution, then Build → Rebuild Solution.
-          • Verify that .NET desktop development workload is installed in
-            the Visual Studio Installer.
+          • Verify that .NET desktop development workload is installed.
 
 PROBLEM:  Attachments do not upload.
-SOLUTION: • Make sure files are under 5 MB.
-          • Verify the file type is supported.
-          • Check that you have read permission for the file.
+SOLUTION: • Make sure files are under 5 MB and are a supported file type.
 
 PROBLEM:  The form is too small or the buttons are cut off.
 SOLUTION: • The forms are resizable and scrollable.
           • Maximise the window or drag the edges to resize.
-          • Scrollbars will appear automatically when needed.
-
-PROBLEM:  "ReportIssuesForm" or "LocalEventsForm" not found.
-SOLUTION: • Ensure all form files (.cs and .Designer.cs) exist.
-          • Check that all files belong to the namespace
-            MunicipalServices.
 
 PROBLEM:  Data is lost when the application closes.
-SOLUTION: • This is expected. Part 1 and Part 2 store data in memory
-            only. Persistent storage (database or file) will be
-            implemented in a later part of the POE.
+SOLUTION: • This is expected. The application stores data in memory only.
+            Persistent storage (database) is recommended for future versions.
 
-PROBLEM:  Events do not appear in the list.
-SOLUTION: • Click the "📥 Load Events" button first.
-          • Check that the category filter is set to "All Categories".
+PROBLEM:  Search ID in Part 3 says "Not Found".
+SOLUTION: • Ensure you are typing a valid ID from the list (e.g., 101, 102, 103).
+          • Make sure you click "Load Data" first if the list is empty.
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -384,44 +326,36 @@ MunicipalServices/
 ├── MunicipalServices.sln              Solution file
 ├── README.txt                         This file
 │
-├── MainForm.cs                        Main menu logic
-├── MainForm.Designer.cs               Main menu UI
+├── MainForm.cs / Designer             Main menu logic and UI
 │
-├── ReportIssuesForm.cs                Report Issues logic (Part 1)
-├── ReportIssuesForm.Designer.cs       Report Issues UI (Part 1)
-│
-├── LocalEventsForm.cs                 Local Events logic (Part 2)
-├── LocalEventsForm.Designer.cs        Local Events UI (Part 2)
-│
-├── Event.cs                           Event data class (Part 2)
+├── ReportIssuesForm.cs / Designer     Report Issues logic and UI (Part 1)
 ├── IssueReport.cs                     Issue data class (Part 1)
+│
+├── LocalEventsForm.cs / Designer      Local Events logic and UI (Part 2)
+├── Event.cs                           Event data class (Part 2)
+│
+├── ServiceRequestForm.cs / Designer   Service Status logic and UI (Part 3)
+├── ServiceRequest.cs                  Service request data class (Part 3)
+├── DataStructures.cs                  AVL Tree, Min-Heap, Graph/MST (Part 3)
 │
 ├── Program.cs                         Application entry point
 │
-├── Properties/
-│   └── AssemblyInfo.cs                Assembly metadata
-│
-├── bin/                               Compiled output (auto-generated)
-│   ├── Debug/
-│   │   └── MunicipalServices.exe      Run this file
-│   └── Release/
-│
-└── obj/                               Intermediate build files
-                                       (auto-generated, safe to delete)
+└── Properties/
+    └── AssemblyInfo.cs                Assembly metadata
 
 ═══════════════════════════════════════════════════════════════════════════════
 
 10. AUTHOR INFORMATION
 ───────────────────────────────────────────────────────────────────────────────
 
-  Student Name:      Sbonakaliso Madlopha
+  Student Name:      Sbonakaliso Sfiso Madlopha
   Student Number:    10377944
   Module:            PROG7312 / AAPD7112/w
   Module Title:      Advanced Application Development
   Institution:       Rosebank College
   Campus:            Durban
-  Assessment:        Portfolio of Evidence (PoE) – Part 1 & Part 2
-  Submission Date:   14 October 2026
+  Assessment:        Portfolio of Evidence (PoE) – Parts 1, 2 & 3
+  Submission Date:   13 November 2026
 
 ═══════════════════════════════════════════════════════════════════════════════
 
@@ -429,39 +363,26 @@ MunicipalServices/
 ───────────────────────────────────────────────────────────────────────────────
 
 VERSION 1.0 — Part 1: Report Issues
-───────────────────────────────────
-  • Main Menu with three navigation options
-  • Report Issues form (location, category, description)
-  • File attachment using OpenFileDialog
-  • Form validation and success messages
-  • Gamification: points, progress bar, achievements
-  • View Reports feature
-  • Data stored in memory using List<IssueReport>
+  • Main Menu, Report Issues form, File attachment, Gamification.
 
 VERSION 2.0 — Part 2: Local Events and Announcements
-────────────────────────────────────────────────────
-  • Main Menu updated: Local Events option enabled
-  • LocalEventsForm created
-  • Ten sample municipal events loaded
-  • Search by keyword (title, category, location, description)
-  • Category filter dropdown
-  • Detailed event view on selection
-  • Priority-based ordering (High / Medium / Low)
-  • Recommendation engine based on user behaviour
-  • Eight data structures implemented:
-        Stack, Queue, Priority Queue, SortedDictionary,
-        Dictionary, two HashSets, and a search history Dictionary
-  • Forms updated to be scrollable, resizable and maximised by default
-  • Larger, more readable fonts throughout the application
+  • LocalEventsForm, Search/Filter, Recommendation engine.
+  • 8 Data structures implemented (Stack, Queue, Dictionaries, Sets).
+
+VERSION 3.0 — Part 3: Service Request Status
+  • ServiceRequestForm created.
+  • 3 Advanced Data Structures implemented:
+        - AVL Tree (for fast ID searching)
+        - Min-Heap (for priority extraction)
+        - Graph & MST (for optimised routing)
+  • Enabled the third option on the Main Menu.
 
 FUTURE VERSIONS
 ───────────────
-  • Service Request Status form (Part 3)
-  • Persistent storage (database or file)
-  • Real-time municipal data integration
-  • User accounts and login
-  • Push notifications for event reminders
-  • Analytics dashboard for municipal officials
+  • Persistent storage (SQL Server/Entity Framework).
+  • Azure Maps / Google Maps integration for real GPS routing.
+  • User accounts and login capabilities.
+  • Push notifications for event reminders and status updates.
 
 ═══════════════════════════════════════════════════════════════════════════════
                               END OF README
