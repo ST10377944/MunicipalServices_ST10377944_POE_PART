@@ -12,9 +12,9 @@ namespace MunicipalServices
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // Local Events is now ENABLED, only Status is disabled
-            btnEvents.Enabled = true;   // CHANGED from false
-            btnStatus.Enabled = false;  // Still disabled
+            // Both Events and Status are now enabled for Part 3
+            btnEvents.Enabled = true;
+            btnStatus.Enabled = true;  // CHANGED: Now enabled
             this.Text = "Municipal Services Application - South Africa";
 
             lblWelcome.Text = "Welcome to Municipal Services!";
@@ -29,17 +29,15 @@ namespace MunicipalServices
 
         private void btnEvents_Click(object sender, EventArgs e)
         {
-            // CHANGED: Now opens the Events form instead of showing a message
             LocalEventsForm eventsForm = new LocalEventsForm();
             eventsForm.ShowDialog();
         }
 
         private void btnStatus_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature will be available in a future update.",
-                "Not Available",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            // CHANGED: Opens the new Service Request Form
+            ServiceRequestForm statusForm = new ServiceRequestForm();
+            statusForm.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)

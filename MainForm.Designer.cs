@@ -111,16 +111,16 @@
             // ═══════════════════════════════════════════════════════════
             // STATUS BUTTON (Disabled)
             // ═══════════════════════════════════════════════════════════
-            this.btnStatus.BackColor = System.Drawing.Color.FromArgb(200, 200, 200);
-            this.btnStatus.Enabled = false;
+            this.btnStatus.BackColor = System.Drawing.Color.FromArgb(0, 120, 200);
+            this.btnStatus.Enabled = true;
             this.btnStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStatus.Font = new System.Drawing.Font("Arial", 20F, System.Drawing.FontStyle.Bold);
-            this.btnStatus.ForeColor = System.Drawing.Color.FromArgb(100, 100, 100);
+            this.btnStatus.ForeColor = System.Drawing.Color.White;
             this.btnStatus.Location = new System.Drawing.Point(55, 460);
             this.btnStatus.Name = "btnStatus";
             this.btnStatus.Size = new System.Drawing.Size(700, 80);
             this.btnStatus.TabIndex = 6;
-            this.btnStatus.Text = "📊 Service Request Status (Coming Soon)";
+            this.btnStatus.Text = "📊 Service Request Status";
             this.btnStatus.UseVisualStyleBackColor = false;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
 
